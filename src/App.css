@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
+@import url("https://use.typekit.net/hoj0xri.css");
+
+*{
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2,h1{
+  font-family:BasicSans-SemiBold, Basic Sans;
+  font-weight: 600;
+  color: #fff;       
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p,h5,h4,h3{
+  font-family: Nunito !important;
+  color: #fff;  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+body{
+  margin: 0 5vw ;
+  background-color: #433E47;
+}
+
+a{
+  text-decoration: none;
+}
+
+#header{
+  background-color: #433E47;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
   align-items: center;
+  height: 60px;
+  width: 90vw;
+  margin-left: -5vw;
+  padding: 0 5vw;
+  z-index: 999;
+  position: fixed;
+}
+
+#header #logo{
+  margin: 2.5px auto
+}
+
+#header #bellIcon{
+  display: flex;
+  justify-self: end;
+}
+
+#navigation{
+  position: fixed;
+  display: grid;
+  grid-template-columns: 18.75% 18.75% 25% 18.75% 18.75%;
+  width: 100vw;
+  margin-left: -5vw;
+  height: 55px;
+  bottom: 0;
+  z-index: 100;
+  background-color: #666572;
+  border-radius: 15px 15px 0 0;
+}
+
+.navActive{
+  border-top: 3px solid #3d9bf7;
+}
+
+#navigation a{
+  margin: 10px auto;
+}
+
+#navigation #addIcon{
+  margin: 5px auto !important;
+}
+
+.addWrapperToggle{
+  bottom: 100px !important;
+}
+
+.blur{
+  top: 0;
+  position: absolute;
+  height: 95vh;
+  width: 100vw;
+  margin-left: -5vw;
+  z-index: 9;
+  backdrop-filter: blur(2.5px);
+}
+
+#addWrapper{
+  width: 90vw;
+  position: fixed;
+  bottom: -100px;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 50px;
+  transition: all 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+#addWrapper div{
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  background-color: #3d9bf7;
+  padding: 15px;
+  border-radius: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#addWrapper #writePost svg{
+  transform: translate(5px) !important;
+}
+
+
+#content{
+  padding-top:86px !important;
+}
+
+#map{
+  margin-left: -5vw;
+  margin-top: -25px;
+}
+
+.marker{
+  margin-left: -50%;
+  margin-top: -100%;
+  height: 50px;
+}
+
+.marker img{
+  height: 50px;
+}
+
+.mapboxgl-popup {
+  top: -40px !important;
+}
+
+.popup p{
+  color: #000;
+}
+
+.popupImg{
+  height: 100px;
+}
+
+#createEventWrapper{
+  background-color: #5C5B66;
+  border-radius: 15px;
+  width: 100%;
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: 90%;
+  justify-content: center;
+  margin-bottom: 125px;
+}
+
+#createEventWrapper h1{
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.uploadImage{
+background-color: #8A8997;
+background-image: url(./images/iconmonstr-picture-8.svg);
+background-repeat: no-repeat;
+background-size: 30%;
+background-position: center;
+border-radius: 15px;
+width: 100%;
+height: 150px;
+text-align: center;
+}
+
+#progress{
+  margin: 0 auto 25px auto;
+}
+
+#createEventWrapper input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 17.5px;
+}
+
+#startDate{
+  width: 87%;
+}
+
+#endDate{
+  width: 89%;
+}
+
+#createEventWrapper input::placeholder{
+  color: #fff;
+}
+
+.mapboxgl-ctrl{
+  z-index: 1 !important;
+}
+
+.mapboxgl-ctrl-geocoder{
+  height: 50px;
+  
+}
+
+.mapboxgl-ctrl-geocoder *, .mapboxgl-ctrl-geocoder--input, .mapboxgl-ctrl-geocoder--input::placeholder {
+  color: #000 !important;
+  border-bottom: none !important;
+}
+
+.mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right, .mapboxgl-ctrl-top-left, .mapboxgl-ctrl-top-right {
+  z-index: 0 !important;
+}
+
+#imgButton{
+  display: none;
+}
+
+#eventTypeTitle{
+  margin-top: 25px;
+}
+
+#eventTypeWrapper{
+  margin-top: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.eventType{
+  width: 100px;
+  text-align: center;
+  color: #fff;
 }
