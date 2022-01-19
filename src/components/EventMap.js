@@ -8,6 +8,8 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 
+
+
 function EventMap() {
   // Mapbox key
   const MAPBOX_TOKEN =
@@ -18,7 +20,7 @@ function EventMap() {
     latitude: 47.376888,
     longitude: 8.541694,
     width: "100vw",
-    height: "90vh",
+    height: "92vh",
     zoom: 5,
   });
 

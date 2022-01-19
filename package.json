@@ -2,11 +2,13 @@
   "name": "meets",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://i457275.hera.fhict.nl/meets",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "firebase": "^9.6.1",
+    "mapbox-gl": "^2.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-id-generator": "^3.0.2",
@@ -27,7 +29,8 @@
     "workbox-range-requests": "^5.1.4",
     "workbox-routing": "^5.1.4",
     "workbox-strategies": "^5.1.4",
-    "workbox-streams": "^5.1.4"
+    "workbox-streams": "^5.1.4",
+    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,7 +48,9 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not chrome < 51",
+      "not safari < 10"
     ],
     "development": [
       "last 1 chrome version",

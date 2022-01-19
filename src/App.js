@@ -6,7 +6,6 @@ import Homepage from './components/Homepage';
 import EventMap from './components/EventMap';
 import CreateEvent from './components/CreateEvent';
 import { Routes, Route, Link } from "react-router-dom";
-import { useState } from 'react/cjs/react.development';
 
 function App() {
 
@@ -18,7 +17,7 @@ function App() {
       <Header /> 
       <Navigation />
       <div id="content">
-      <Routes>
+      <Routes basename="/meets">
         <Route path="/" element={<Homepage/>} />
         <Route path="/map" element={<EventMap />} />
         <Route path="/createEvent" element={<CreateEvent />} />
